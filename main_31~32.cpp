@@ -10,7 +10,6 @@ void Output(const int *pI) {
 	// 물론 const 포인터를 강제로 수정할수도 있긴 함.
 	int * pInt = (int*)pI;
 	*pInt = 1000;
-
 }
 
 int main() {
