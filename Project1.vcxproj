@@ -148,7 +148,7 @@
     <ClCompile Include="main_28~30.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="main_31~32.cpp" />
+    <ClCompile Include="main_31~35.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
