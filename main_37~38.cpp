@@ -74,8 +74,6 @@ void StrCat(wchar_t* _pDest, unsigned int _iBufferSize, const wchar_t* _pSrc)
 	{
 		_pDest[iDestLen + i] = _pSrc[i];
 	}
-
-	
 }
 
 int main() 
@@ -102,8 +100,6 @@ int main()
 	// 왼쪽이 더 우열이 높은 경우(사전순서로 후위) 1
 	// 오른쪽이 더 우열이 높은 경우 -1
 	// Hint : 우열을 가릴 땐 아스키코드로 비교
-	
-
 
 	return 0;
 }
