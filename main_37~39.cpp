@@ -76,6 +76,61 @@ void StrCat(wchar_t* _pDest, unsigned int _iBufferSize, const wchar_t* _pSrc)
 	}
 }
 
+/* 과제 풀이 : 문자열의 우선순위 비교 구현 (wcscmp 구현)*/
+int StrComparison(const wchar_t* Str1, const wchar_t* Str2)
+{
+	int i = 0;
+	const wchar_t* big = GetLength(Str1) >= GetLength(Str2) ? Str1 : Str2;
+
+	while ('\0' != big[i])
+	{
+		if (Str1[i] > Str2[i])
+		{
+			return 1; 
+		}
+		else if(Str1[i] < Str2[i])
+		{
+			return -1;
+		}
+		++i;
+	}
+	return 0;
+}
+
+/* wcscmp 구현 강의 정답 */
+int StrCmp(const wchar_t* _left, const wchar_t* _right)
+{
+	int leftLen = GetLength(_left);
+	int rightLen = GetLength(_right);
+
+	int iLoop = leftLen;
+	int iReturn = 0;
+
+	if (leftLen < rightLen)
+	{
+		iLoop = leftLen;
+		iReturn = -1;
+	}
+	else if(leftLen > rightLen)
+	{
+		iLoop = rightLen;
+		iReturn = 1;
+	}
+
+	for (int i = 0; i < iLoop; ++i)
+	{
+		if (_left[i] < _right[i])
+		{
+			return -1;
+		}
+		else if(_left[i] > _right[i])
+		{
+			return 1;
+		}
+	}
+	return iReturn;
+}
+
 int main() 
 {
 	wchar_t szName[10] = L"Raimond";
@@ -94,12 +149,18 @@ int main()
 	// StrCat(szString, 10, L"defghijk"); // 에러예시
 
 	/* 과제 */
-	int iRet = wcscmp(L"abc", L"cbc");
+	int iRet = wcscmp(L"abc", L"abcz");
+	int iRet2 = StrComparison(L"abc", L"abcz");
+	int iRet3 = StrCmp(L"gbd", L"abb");
 	// wcscmp는 저울같은 함수이다.
 	// 왼쪽과 오른쪽이 완벽하게 일치하면 0
 	// 왼쪽이 더 우열이 높은 경우(사전순서로 후위) 1
 	// 오른쪽이 더 우열이 높은 경우 -1
 	// Hint : 우열을 가릴 땐 아스키코드로 비교
+	printf("wcscmp 결과 : %d\n", iRet);
+	printf("wcscmp 결과 : %d\n", iRet2);
+	printf("wcscmp 결과 : %d\n", iRet3);
+	printf("%d", int('A'));
 
 	return 0;
 }
