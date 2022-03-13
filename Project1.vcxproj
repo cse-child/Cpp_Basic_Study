@@ -151,7 +151,7 @@
     <ClCompile Include="main_31~36.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="main_37~38.cpp">
+    <ClCompile Include="main_37~39.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">아니오</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>

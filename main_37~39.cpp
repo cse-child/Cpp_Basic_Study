@@ -135,8 +135,8 @@ int main()
 {
 	wchar_t szName[10] = L"Raimond";
 
-	// int iLen = wcslen(szName);
-	int iLen = GetLength(szName);
+	int iLen = wcslen(szName);
+	int iLen2 = GetLength(szName);
 	
 	// 문자열 이어 붙이기
 	Test(10);
@@ -144,7 +144,7 @@ int main()
 
 	wchar_t szString[10] = L"abc";
 	
-	// wcscat_s(szString, 10, L"def");
+	wcscat_s(szString, 10, L"def");
 	StrCat(szString, 10, L"def");
 	// StrCat(szString, 10, L"defghijk"); // 에러예시
 
