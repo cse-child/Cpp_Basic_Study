@@ -25,6 +25,12 @@ void Test(float a)
 
 }
 
+typedef struct _tagMyST
+{
+	int a; // 멤버
+	float f;
+}MYST;
+
 /* 문자열의 길이 체크 함수 (wcslen 구현) */
 unsigned int GetLength(const wchar_t* _pStr) 
 {
@@ -161,6 +167,19 @@ int main()
 	printf("wcscmp 결과 : %d\n", iRet2);
 	printf("wcscmp 결과 : %d\n", iRet3);
 	printf("%d", int('A'));
+	
+
+	/* 강의 40화. 구조체 포인터 */
+	// 구조체와 포인터
+	MYST s = {};
+
+	MYST* pST = &s;
+
+	(*pST).a = 100;
+	(*pST).f = 3.14f;
+
+	pST->a; // 역참조 한 이후에 멤버를 지칭할 땐 화살표(포인터)
+	pST->f;
 
 	return 0;
 }
