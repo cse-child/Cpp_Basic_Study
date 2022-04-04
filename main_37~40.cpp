@@ -175,6 +175,9 @@ int main()
 
 	MYST* pST = &s;
 
+	s.a = 50;
+	s.f = 3.14f;
+
 	(*pST).a = 100;
 	(*pST).f = 3.14f;
 

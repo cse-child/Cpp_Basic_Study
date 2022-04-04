@@ -10,20 +10,6 @@ void InitArr(tArr* _pArr)
 	_pArr->iMaxCount = 2;
 }
 
-// 데이터 추가 함수
-void PushBack(tArr * _pArr, int _iData)
-{
-	// 힙 영역에 할당한 공간이 다 참
-	if (_pArr->iMaxCount <= _pArr->iCount) 
-	{
-		// 재할당
-		Reallocate(_pArr);
-	}
-
-	// 데이터 추가
-	_pArr->pInt[_pArr->iCount++] = _iData;
-}
-
 // 배열의 공간 추가 확장 함수 (재할당)
 void Reallocate(tArr * _pArr)
 {
@@ -48,6 +34,22 @@ void Reallocate(tArr * _pArr)
 	// 5. MaxCount 변경점 적용
 	_pArr->iMaxCount *= 2;
 }
+
+// 데이터 추가 함수
+void PushBack(tArr * _pArr, int _iData)
+{
+	// 힙 영역에 할당한 공간이 다 참
+	if (_pArr->iMaxCount <= _pArr->iCount) 
+	{
+		// 재할당
+		Reallocate(_pArr);
+	}
+
+	// 데이터 추가
+	_pArr->pInt[_pArr->iCount++] = _iData;
+}
+
+
 
 // 배열 메모리 해제 함수
 void ReleaseArr(tArr * _pArr)

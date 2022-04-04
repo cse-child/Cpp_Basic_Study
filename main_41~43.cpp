@@ -15,11 +15,7 @@
 // ROM
 // ★힙 영역(동적할당)
 
-int g_i = 100;
 
-typedef struct _tagST {
-	int iArr[g_i];
-}ST;
 
 int main() {
 	// 동적할당 : 프로그램 실행 도중에(런타임 중) 내가 원하는 만큼 메모리를 요청할 수 있는 것
