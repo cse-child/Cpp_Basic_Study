@@ -19,6 +19,9 @@
     <Filter Include="LinkedList">
       <UniqueIdentifier>{c1f6a53a-990f-45a4-af3b-12532909e141}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LinkedList_구현과제">
+      <UniqueIdentifier>{b1d5d4b6-36f3-4108-af6f-54e523d9396d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main_1~12.cpp">
@@ -54,11 +57,23 @@
     <ClCompile Include="main_41~43.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main_44~.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="LinkedList.cpp">
       <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="Linked_Main.cpp">
+      <Filter>LinkedList_구현과제</Filter>
+    </ClCompile>
+    <ClCompile Include="Linked_Arr.cpp">
+      <Filter>LinkedList_구현과제</Filter>
+    </ClCompile>
+    <ClCompile Include="main_44~48.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main_49~50.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="main_51~.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="LinkedList.h">
       <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="Linked_Arr.h">
+      <Filter>LinkedList_구현과제</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

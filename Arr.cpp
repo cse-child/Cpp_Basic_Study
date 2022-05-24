@@ -58,3 +58,10 @@ void ReleaseArr(tArr * _pArr)
 	_pArr->iCount = 0;
 	_pArr->iMaxCount = 0;
 }
+
+// 데이터 정렬 함수
+void Sort(tArr * _pArr, void(*SortFunc)(int*, int))
+{
+	SortFunc(_pArr->pInt, _pArr->iCount);
+}
+
